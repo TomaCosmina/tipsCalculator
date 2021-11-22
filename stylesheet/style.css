@@ -1,0 +1,236 @@
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: #c5e4e7;
+  margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+@media (min-width: 550px) {
+  .card {
+    margin: 3em auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    width: 38em;
+    height: 17em;
+    border-radius: 10px;
+  }
+  .card .first-card button,
+  .card .first-card #custom {
+    width: 6em;
+    height: 2.3em;
+  }
+  .card .first-card #custom {
+    text-align: center;
+  }
+  .card .second-card {
+    width: 260px;
+    height: 14em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr 2fr;
+    padding: 1.3em;
+  }
+  .card .second-card #reset[disabled],
+  .card .second-card #reset {
+    margin-top: 4em;
+  }
+  .card .second-card .style-paragraph {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    height: 75vh;
+  }
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-top: 3em;
+    padding: 1em 0;
+    border-radius: 30px;
+  }
+  .card .people {
+    width: 85%;
+    margin: 0 1em;
+  }
+  .card .first-card {
+    padding: 0 1.5em;
+  }
+  .card .first-card button,
+  .card .first-card #custom {
+    width: 10.5em;
+    height: 3em;
+  }
+  .card .first-card #custom {
+    text-align: center;
+  }
+  .card .second-card {
+    width: 80%;
+    height: 12em;
+    margin: 6%;
+    display: block;
+    padding: 1em 1em;
+  }
+  .card .second-card #reset,
+  .card .second-card #reset[disabled] {
+    width: 85%;
+    display: block;
+    margin: 1em auto;
+    font-weight: 700;
+  }
+  .card .second-card .style-paragraph {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.title {
+  line-height: .2em;
+  color: #5e7a7d;
+  letter-spacing: .2em;
+  text-align: center;
+  margin-top: 5em;
+}
+
+.title h3 {
+  font-weight: 700;
+}
+
+.card {
+  background-color: white;
+  padding: 1em 0;
+}
+
+.card .first-card {
+  padding: 0 1em;
+}
+
+.card .first-card p {
+  font-size: 12px;
+  font-weight: 700;
+  opacity: .6;
+  margin-top: .5em;
+}
+
+.card .first-card .buttons {
+  display: inline-block;
+}
+
+.card .first-card .buttons button {
+  margin: .5em 0;
+  background-color: #00494d;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card .first-card .buttons button:hover, .card .first-card .buttons button:focus, .card .first-card .buttons button:active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.card .first-card input {
+  cursor: pointer;
+  border: none;
+  height: 1.8em;
+  border-radius: 4px;
+  width: 95%;
+  margin-bottom: 1.2em;
+  background-color: #f4fafa;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  opacity: .6;
+  text-align: end;
+}
+
+.card .first-card input:hover, .card .first-card input:active, .card .first-card input:focus {
+  border: 2px solid #26c0ab;
+  outline: none;
+}
+
+.card .first-card input#amount {
+  background: url("../images/icon-dollar.svg");
+}
+
+.card .first-card input#num-people {
+  background: url("../images/icon-person.svg");
+}
+
+.card .first-card input#amount,
+.card .first-card input#num-people {
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 2px;
+  background-size: 9px;
+}
+
+.card .second-card {
+  background-color: #00494d;
+  border-radius: 10px;
+  color: white;
+}
+
+.card .second-card #reset {
+  cursor: pointer;
+  background-color: #26c0ab;
+  color: #00494d;
+  border: none;
+  width: 100%;
+  height: 2.5em;
+  border-radius: 5px;
+  padding: .5em 0;
+  font-weight: 700;
+}
+
+.card .second-card #reset[disabled] {
+  opacity: .3;
+}
+
+.card .second-card .style-paragraph .style-tip {
+  display: -ms-grid;
+  display: grid;
+  width: 104px;
+  font-size: 14px;
+}
+
+.card .second-card .style-paragraph .amount-person,
+.card .second-card .style-paragraph .total-person {
+  font-size: 32px;
+  position: relative;
+  top: 20px;
+  color: #26c0ab;
+  font-weight: 700;
+}
+
+.card .second-card .style-paragraph .low-opacity {
+  font-size: 12px;
+  opacity: .5;
+}
+/*# sourceMappingURL=style.css.map */
